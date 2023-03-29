@@ -1,3 +1,4 @@
+
 -- Ej 1
 SELECT 5+10, 10-5, 10*5, 10/5;
 -- Ej 2
@@ -30,7 +31,7 @@ SELECT * FROM conferencia
 WHERE precio>12 AND precio<19
 AND tema NOT IN ('Programación web');
 -- Ej 11 
-SELECT CONCAT(apellido1, if(apellido2 IS NULL, "", " " + apellido2)) 
+SELECT CONCAT(apellido1, if(apellido2 IS NULL, "", concat(" ", apellido2))) 
 AS Apellidos, 
 fechaNac, empresa 
 FROM asistente 
@@ -61,3 +62,58 @@ FROM conferencia;
  UPPER(especialidad) AS 'Especialidad'
  FROM ponente
  ORDER BY 'Apellido Resultante' ASC;
+ -- Ej 16 
+ SELECT 
+ UPPER(nombre) AS 'Nombre',
+ UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
+ UPPER(especialidad) AS 'Especialidad'
+ FROM ponente
+  ORDER BY 'Apellido Resultante' ASC;
+ -- Ej 17 
+ 
+ SELECT 
+ UPPER( RPAD(nombre, 10, '*') ) AS 'Nombre',
+ UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
+ UPPER(especialidad) AS 'Especialidad'
+ FROM ponente
+ORDER BY 'Apellido Resultante' ASC;
+
+-- Ej 18
+SELECT 
+if(nombre not IN('Jose'),nombre, 'Pepe') AS 'Nombre',
+apellido1 AS 'PrimerApellido',
+if(apellido2 is not NULL, apellido2, '') AS 'SegundoApellido', 
+LENGTH(CONCAT(nombre, apellido1, if(apellido2 is not NULL, apellido2, ''))) AS 'Longitud'
+FROM asistente;
+-- Ej 19 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
