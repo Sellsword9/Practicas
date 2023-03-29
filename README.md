@@ -1,1 +1,2 @@
-# Prácticas con distintos lenguajes de programación o SQL
+# Prácticas
+Microprogramas y microprácticas en distintintos lenguajes de programación
