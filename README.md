@@ -1,2 +1,2 @@
 # Prácticas
-Microprogramas y microprácticas en distintintos lenguajes de programación
+Microprogramas y microprácticas en distintos lenguajes de programación
