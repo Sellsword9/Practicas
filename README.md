@@ -1,1 +1,0 @@
-# Prácticas en distintos lenguajes
