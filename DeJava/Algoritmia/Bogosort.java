@@ -1,6 +1,7 @@
 package DeJava.Algoritmia;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner; 
@@ -24,7 +25,9 @@ public class Bogosort {
         System.out.println("List:");
         orden.forEach(System.out::println);
         System.out.println("""
-            --- End of list/Fin de lista ---
-            ---                             """);
+            --- End of list/Fin de lista
+            --- Best time (Java)/
+            ----Mejor tiempo con Java:  """);
+        Collections.sort(orden);
     }
 }
