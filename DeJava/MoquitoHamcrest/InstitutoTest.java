@@ -1,5 +1,6 @@
-/*
 package DeJava.MoquitoHamcrest;
+/*
+//---------Hamcrest-----------
 
 import org.junit.Test;
 import static org.junit.Assert.*;
