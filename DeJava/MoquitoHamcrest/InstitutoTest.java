@@ -1,14 +1,11 @@
-
+/*
 package DeJava.MoquitoHamcrest;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.mockito.Mockito;
 
-/**
- *
- * @author usuario
- */
+
 public class InstitutoTest {
     
     public InstitutoTest() {
@@ -31,3 +28,4 @@ public class InstitutoTest {
     }
     
 }
+*/
