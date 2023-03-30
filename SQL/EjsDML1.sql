@@ -1,0 +1,10 @@
+-- Ej 17
+--Borrar uno de los clientes y comprobar si hubo cambios en las tablas relacionadas. Si no
+--hubo cambios, modificar las tablas necesarias estableciendo la clave foránea con la cláusula
+--ON DELETE CASCADE.
+-- 
+-- Al borrar los datos, como las tablas están por defecto en el modo RESTRICT,
+-- el gestor lanza un error. Al actualizar con la cláusula mencionada,
+-- vuelve a dejar borrar, pero borra absolutamente todas las tablas que
+-- hacían referencia al dato borrado. Esto puede volverse recursivo y 
+-- borrar mucha información si no se tiene cuidado
