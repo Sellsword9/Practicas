@@ -1,5 +1,5 @@
 
-/*-- Ej 1 
+-- Ej 1 
 SELECT 5+10, 10-5, 10*5, 10/5;
 -- Ej 2
 SELECT 5+10 AS suma, 10-5 AS resta, 10*5 AS producto, 10/5 AS cociente;
@@ -85,8 +85,15 @@ apellido1 AS 'PrimerApellido',
 if(apellido2 is not NULL, apellido2, '') AS 'SegundoApellido', 
 LENGTH(CONCAT(nombre, apellido1, if(apellido2 is not NULL, apellido2, ''))) AS 'Longitud'
 FROM asistente;
--- Ej 19 */
+-- Ej 19 
 select nombre,
 if(apellido2 is null, apellido1, concat(apellido1," ", apellido2)) as 'Apellidos',
 DATEDIFF(NOW(), fechaNac) AS 'Días vividos'
-from asistente
+from asistente;
+-- Ej 20 
+SELECT nombre AS Nombre,
+if(apellido2 is null, apellido1, concat(apellido1," ", apellido2)) as 'Apellidos',
+DATE_FORMAT(fechaNac, '%W') AS DiaSemana, 
+DATE_FORMAT(fechaNac, '%j') AS DiaAño, 
+WEEK(fechaNac) AS NumeroSemana 
+FROM asistente;
