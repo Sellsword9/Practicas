@@ -95,6 +95,83 @@ DATE_FORMAT(fechaNac, '%W') AS DiaSemana,
 DATE_FORMAT(fechaNac, '%j') AS DiaAño, 
 WEEK(fechaNac) AS NumeroSemana 
 FROM asistente;
+-- Ej 21
+select count(nombre) as 'Total' 
+from sala
+where capacidad >= 200;
+-- Ej 22
+select sum(gratificacion)/count(gratificacion) AS 'Media',
+ponente.nombre AS 'Ponente'
+from participar
+inner JOIN ponente on ponente.codigo = participar.codPonente
+GROUP BY codPonente
+-- Ej 23
+select count(distinct(sala)) as 'Total de salas',
+if(turno='T', 'Tarde', 'Mañana') as 'Turno'
+from conferencia
+group by turno
+-- Ej 24
+select count(distinct(sala)) as 'Total de salas',
+if(turno='T', 'Tarde', 'Mañana') as 'Turno'
+from conferencia
+where conferencia.sala not in ('Apolo')
+group by turno
+-- Ej 25
+select sala as 'Salas',
+'Mañana' as 'Turno'
+from conferencia
+where conferencia.sala not in ('Apolo') and
+turno = 'M'
+-- Ej 26
+SELECT 
+empresa, 
+if(sexo='H', 'Hombres', 'Mujeres'), 
+COUNT(*) as 'Total'
+FROM asistente
+GROUP BY empresa, sexo;
+-- Ej 27
+SELECT 
+if(empresa is not null, empresa, 'Sin empresa'), 
+if(sexo='H', 'Hombres', 'Mujeres'), 
+COUNT(*) as 'Total'
+FROM asistente
+GROUP BY empresa, sexo;
+-- Ej 28
+SELECT 
+if(empresa is not null, empresa, 'Sin empresa'), 
+if(sexo='H', 'Hombres', 'Mujeres'), 
+COUNT(*) as 'Total'
+FROM asistente
+where sexo='H'
+GROUP BY empresa, sexo;
+-- Ej 29
+select nombre,
+conferencia.tema,
+conferencia.referencia
+from ponente
+auto join conferencia
+where (codigo, conferencia.referencia) in
+    (select codPonente, refConferencia from participar)
+order by nombre;
+-- Ej 30
+select nombre,
+apellido1, apellido2
+from asistente
+where codigo in
+    (select codAsistente
+     from asistir
+     where refConferencia = 'PWB1314');
+-- Ej 34
+select concat(nombre, " ", apellido1) 
+as 'Ponente'
+from ponente
+where codigo in
+    (select codPonente
+     from participar
+     where refConferencia in
+        (select referencia
+         from conferencia
+         where sala='Afrodita'));     
 -- Ej 35
 SELECT * FROM ponente
 WHERE apellido1 IN 
