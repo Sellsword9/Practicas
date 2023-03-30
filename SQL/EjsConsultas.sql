@@ -50,34 +50,32 @@ precio * (1 - .15) AS '15% descuento',
 precio * (1 - .2) AS '20% descuento'
 FROM conferencia;
 -- Ej 14
- SELECT tema, 
- round(precio * 0.95) AS 'precio final',
- DATE_FORMAT(fecha, '%d/%m/%Y') AS fecha
- FROM conferencia
- ORDER BY 'precio final' desc;
- -- Ej 15
- SELECT 
- UPPER(nombre) AS 'Nombre',
- UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), apellido1)) AS 'Apellido Resultante',
- UPPER(especialidad) AS 'Especialidad'
- FROM ponente
- ORDER BY 'Apellido Resultante' ASC;
- -- Ej 16 
- SELECT 
- UPPER(nombre) AS 'Nombre',
- UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
- UPPER(especialidad) AS 'Especialidad'
- FROM ponente
-  ORDER BY 'Apellido Resultante' ASC;
- -- Ej 17 
- 
- SELECT 
- UPPER( RPAD(nombre, 10, '*') ) AS 'Nombre',
- UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
- UPPER(especialidad) AS 'Especialidad'
- FROM ponente
+SELECT tema, 
+round(precio * 0.95) AS 'precio final',
+DATE_FORMAT(fecha, '%d/%m/%Y') AS fecha
+FROM conferencia
+ORDER BY 'precio final' desc;
+-- Ej 15
+SELECT 
+UPPER(nombre) AS 'Nombre',
+UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), apellido1)) AS 'Apellido Resultante',
+UPPER(especialidad) AS 'Especialidad'
+FROM ponente
 ORDER BY 'Apellido Resultante' ASC;
-
+-- Ej 16 
+SELECT 
+UPPER(nombre) AS 'Nombre',
+UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
+UPPER(especialidad) AS 'Especialidad'
+FROM ponente
+ORDER BY 'Apellido Resultante' ASC;
+-- Ej 17 
+SELECT 
+UPPER( RPAD(nombre, 10, '*') ) AS 'Nombre',
+UPPER(if(apellido2 is not NULL, CONCAT(apellido1," ",apellido2), concat(apellido1, ' *****'))) AS 'Apellido Resultante',
+UPPER(especialidad) AS 'Especialidad'
+FROM ponente
+ORDER BY 'Apellido Resultante' ASC;
 -- Ej 18
 SELECT 
 if(nombre not IN('Jose'),nombre, 'Pepe') AS 'Nombre',
@@ -97,3 +95,57 @@ DATE_FORMAT(fechaNac, '%W') AS DiaSemana,
 DATE_FORMAT(fechaNac, '%j') AS DiaAño, 
 WEEK(fechaNac) AS NumeroSemana 
 FROM asistente;
+-- Ej 35
+SELECT * FROM ponente
+WHERE apellido1 IN 
+	(SELECT apellido1 
+	 FROM asistente 
+	 WHERE fechaNac IN 
+	 	(SELECT MAX(fechaNac) 
+		 FROM asistente));
+-- Ej 36
+Select * FROM ponente
+WHERE codigo IN
+	(SELECT codPonente
+	 FROM participar
+	 WHERE refConferencia in
+	 	(SELECT referencia
+	 	 FROM conferencia 
+	 	 WHERE sala = 'Afrodita'));
+-- Ej 37
+Select * FROM asistente
+WHERE Empresa='BigSoft' and 
+codigo IN
+	(SELECT codAsistente
+	 FROM asistir
+	 WHERE refConferencia in
+	 	(SELECT referencia
+	 	 FROM conferencia 
+	 	 WHERE tema='Programación Web'));
+-- Ej 38
+select * from asistente
+where sexo='H' and
+fechaNac BEtween '0000/01/01' AND '1985/01/01' and
+codigo IN
+	(SELECT codAsistente
+	 FROM asistir
+	 WHERE refConferencia in
+	 	(SELECT referencia
+	 	 FROM conferencia 
+	 	 WHERE tema='Programación Web'));
+-- Ej 39
+SELECT
+ponente.nombre AS 'Ponente',
+SUM(participar.gratificacion) AS 'Suma'
+FROM participar
+Inner JOIN ponente ON ponente.codigo = participar.codPonente
+GROUP BY codPonente;
+-- Ej 40
+SELECT 
+concat(Asistente.nombre," ",Asistente.apellido1) AS 'Asistente',
+Conferencia.tema
+FROM Asistente
+INNER JOIN asistir ON Asistente.codigo = asistir.codAsistente
+INNER JOIN Conferencia ON asistir.refConferencia = Conferencia.referencia
+WHERE Conferencia.fecha = '2013-10-02'
+ORDER BY conferencia.tema, asistente.nombre, asistente.apellido1;
