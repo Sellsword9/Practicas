@@ -1,0 +1,9 @@
+#NoTemp
+/.vscode
+*.session.sql
+
+
+
+
+#Temp
+*.json 
