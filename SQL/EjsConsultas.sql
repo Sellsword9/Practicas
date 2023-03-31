@@ -161,6 +161,22 @@ where codigo in
     (select codAsistente
      from asistir
      where refConferencia = 'PWB1314');
+-- Ej 31
+select count(codAsistente) as 'Total de asistentes',
+conferencia.tema as 'Conferencia'
+from asistir
+inner join conferencia 
+on conferencia.referencia = asistir.refConferencia
+group by asistir.refConferencia;
+--Ej 33
+select count(codAsistente) as 'Asistentes',
+conferencia.tema as 'Conferencia',
+conferencia.sala as 'Sala'
+from asistir
+inner join conferencia 
+on conferencia.referencia = asistir.refConferencia
+group by refConferencia
+order by Asistentes;
 -- Ej 34
 select concat(nombre, " ", apellido1) 
 as 'Ponente'
