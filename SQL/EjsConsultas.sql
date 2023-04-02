@@ -168,7 +168,9 @@ from asistir
 inner join conferencia 
 on conferencia.referencia = asistir.refConferencia
 group by asistir.refConferencia;
---Ej 33
+-- Ej 32
+-- NULL
+-- Ej 33
 select count(codAsistente) as 'Asistentes',
 conferencia.tema as 'Conferencia',
 conferencia.sala as 'Sala'
