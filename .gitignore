@@ -1,9 +1,38 @@
-#NoTemp
+##NoTemp
 /.vscode
 *.session.sql
+*.d
 
 
 
-
-#Temp
+##Temp
 *.json 
+
+##Rust
+# .toml files are configuration files for Cargo
+*.toml
+Cargo.lock
+
+# Output files
+/target/
+**/target/
+**/Cargo.lock
+**/.rustc_info.json
+
+# Executables
+**/Cargo.toml
+**/Cargo.lock
+
+# Rust tools
+**/.cargo/
+**/rustfmt.toml
+**/rust-toolchain
+
+# IDE and editor files
+/.idea/
+.vscode/
+*.iml
+
+# System files
+*.DS_Store
+Thumbs.db
