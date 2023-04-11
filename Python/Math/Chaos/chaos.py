@@ -1,5 +1,3 @@
-import ChaosArgs
-
 # Parámetros
 R = 3.789 #Entre 3 y 4
 X0 = 0.5 #Entre 0...1 y 0.999...
