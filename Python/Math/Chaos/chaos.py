@@ -6,16 +6,17 @@ def formula(x: float):
     return R * x * (1 - x)
 
 def generate_chaos(n):
-    numbers = []
+    g = []
     x = X0
     for _ in range(n):
         x = formula(x)
-        numbers.append(x)
-    return numbers
+        g.append(x)
+    return g
 
 # Generar los números per se
 numbers = generate_chaos(100)
 
 # Printear 
 print("Generated pseudo-random numbers: ")
-print(numbers)
+for a in numbers:
+    print(a)
