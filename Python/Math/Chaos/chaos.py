@@ -1,23 +1,23 @@
-def logistic_map(r, x):
-    return r * x * (1 - x)
+import ChaosArgs
 
+# Parámetros
+R = 3.789 #Entre 3 y 4
+X0 = 0.5 #Entre 0...1 y 0.999...
 
-def generate_chaotic_numbers(r, x0, n):
+def formula(x: float):
+    return R * x * (1 - x)
+
+def generate_chaos(n):
     numbers = []
-    x = x0
+    x = X0
     for _ in range(n):
-        x = logistic_map(r, x)
+        x = formula(x)
         numbers.append(x)
     return numbers
 
+# Generar los números per se
+numbers = generate_chaos(100)
 
-# Parameters for the logistic map
-r = 3.9  # Control parameter
-x0 = 0.5  # Initial value
-
-# Generate 100 pseudo-random numbers
-numbers = generate_chaotic_numbers(r, x0, 100)
-
-# Print the generated numbers
-print("Generated pseudo-random numbers:")
+# Printear 
+print("Generated pseudo-random numbers: ")
 print(numbers)
