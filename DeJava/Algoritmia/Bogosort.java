@@ -28,6 +28,8 @@ public class Bogosort {
             --- End of list/Fin de lista
             --- Best time (Java)/
             ----Mejor tiempo con Java:  """);
-        Collections.sort(orden);
+        Collections.sort(orden); //TODO
+        // Necesito contar el tiempo de lo de antes y printearlo
+        // Luego hay que ordenar a mano usando el bogosort mientras vuelves a contar el tiempo
     }
 }
