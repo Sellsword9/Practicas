@@ -1,3 +1,16 @@
-/*
-TODO
+/* Estilos para todo tipo de pantallas con una anchura máxima de 576px
+@media all and (max-width: 576px){
+
+}
 */
+
+/* Estilos para pantallas con al menos 992px de anchura y que estén apaisadas (más ancho que alto)*/
+@media screen and (min-width: 992px) and (orientation: landscape) 
+{
+    
+}
+/* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
+@media only screen and (min-width: 768px) 
+{
+    
+}
