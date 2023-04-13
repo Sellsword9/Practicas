@@ -1,11 +1,51 @@
-/* Estilos para todo tipo de pantallas con una anchura máxima de 576px
-@media all and (max-width: 576px){
+.container {
+    display: grid;
+    grid-template-columns:repeat(5, 20%);
+    grid-template-rows: repeat(4, 100px);
+    margin: 15px auto;
+    width: 80%;
+    grid-template-areas: "cab  cab  cab  cab  cab"
+                         "side main main main sider"
+                         "side main main main sider"
+                         "feet feet feet feet feet"; 
+    }
+    .container > div {
+    border: 2px solid black;
+    }
+    .feet
+    {
+        background-color:rgb(13, 204, 45);
+        color:rgb(13, 204, 45);
+        grid-area: feet;   
+    }
+    .main
+    {
+        background-color:yellow;
+        color: yellow;
+        grid-area: main;
+    }
+    .cab
+    {
+        background-color:rgb(16, 34, 197);
+        color: rgb(16, 34, 197);
+        grid-area: cab;
+    }
+    .side
+    {
+        background-color: red;
+        color: red;
+        grid-area: side;
+    }
+    .sider
+    {
+        background-color: red;
+        color: red;
+        grid-area: sider;
+    }
 
-}
-*/
 
-/* Estilos para pantallas con al menos 992px de anchura y que estén apaisadas (más ancho que alto)*/
-@media screen and (min-width: 992px) and (orientation: landscape) 
+/* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
+@media only screen and (min-width: 768px) 
 {
     .container {
         display: grid;
@@ -29,31 +69,26 @@
         }
         .main
         {
-            background-color:yellow;
-            color: yellow;
+            background-color:red;
+            color: red;
             grid-area: main;
         }
         .cab
         {
-            background-color:rgb(16, 34, 197);
-            color: rgb(16, 34, 197);
+            background-color:rgb(1, 0, 7);
+            color: rgb(1, 0, 7);
             grid-area: cab;
         }
         .side
         {
-            background-color: red;
-            color: red;
+            background-color: rgb(21, 196, 36);
+            color: rgb(21, 196, 36);
             grid-area: side;
         }
         .sider
         {
-            background-color: red;
-            color: red;
+            background-color:rgb(21, 196, 36);
+            color: rgb(21, 196, 36);
             grid-area: sider;
         }
-}
-/* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
-@media only screen and (min-width: 768px) 
-{
-    
 }
