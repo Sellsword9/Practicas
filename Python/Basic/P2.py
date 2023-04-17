@@ -15,5 +15,8 @@ try:
         print("Tu numero es primo")
     else:
         print("Tu numero no es primo")
+        print("Sus divisores no triviales son: ")
+        for a in lista_divisores(numero):
+            print(a)
 except ValueError:
     print("Error: Ingresa un valor numérico válido.")
