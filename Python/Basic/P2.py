@@ -7,7 +7,7 @@ def lista_divisores(x):
 
 filtro_primo = lambda n: not bool(lista_divisores(n))
 
-num = input("Introduce un numero: ")
+num = input("Introduce un numero positivo: ")
 
 try:
     numero = abs(int(num))
