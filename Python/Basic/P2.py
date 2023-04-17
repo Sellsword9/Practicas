@@ -10,7 +10,7 @@ filtro_primo = lambda n: not bool(lista_divisores(n))
 num = input("Introduce un numero: ")
 
 try:
-    numero = int(num)
+    numero = abs(int(num))
     if filtro_primo(numero):
         print("Tu numero es primo")
     else:
