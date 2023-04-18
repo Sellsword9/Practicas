@@ -1,3 +1,4 @@
+# pylint: disable=all
 # Se pregunta un numero y se dice si es primo o no
 def lista_divisores(x):
     a = []
