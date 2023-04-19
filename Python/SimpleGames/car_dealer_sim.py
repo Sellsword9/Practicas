@@ -3,6 +3,7 @@ Un juego basado en texto hecho en python,
 donde el objetivo es, a resumidas cuentas,
 comprar coches barato y venderlos caros.
 """
+from cds_car_list import cars_prices, car_names_list
 
 def main():
     """
@@ -12,8 +13,7 @@ def main():
     def avanzar_turno():
         turno += 1
     def tienda():
-        #TODO
-        print("No programado")
+        print_coches(mny)
     def mercado():
         #TODO
         print("No programado")
@@ -50,3 +50,14 @@ def start():
     return 1e6
 
 main()
+
+def print_coches(budget : int):
+    """
+    Muestra por pantalla
+    una lista randomizada
+    de 9 coches usados para comprar.
+    Muestra de forma distinta los coches,
+    en función de si pueden ser comprados o no
+    """
+
+
