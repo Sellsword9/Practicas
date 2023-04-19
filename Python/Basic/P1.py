@@ -9,24 +9,32 @@ def lista_divisores(x):
 
 filtro_primo = lambda n: not bool(lista_divisores(n))
 
-def preguntar_numero():
-    num = input("Introduce el valor mínimo como un numero positivo: ")
+min = 2
+max = -1
 
-    try:
-        numero = abs(int(num))
-        if numero < min:
-            print("Numero demasiado pequeño, vuelve a intentarlo")
-            preguntar_numero()
-    except ValueError:
-        print("Error: Ingresa un valor numérico válido.")
-        preguntar_numero()
-    return numero
+num = input("Introduce el valor mínimo como un numero positivo: ")
 
+try:
+    numero = abs(int(num))
+    if numero < min:
+        print("Numero demasiado pequeño, vuelve a intentarlo")
+except ValueError:
+    print("Error: Ingresa un valor numérico válido.")
+    
+min = numero
 
-min = preguntar_numero()
-max = preguntar_numero()
+num = input("Introduce el valor máximo como un numero positivo: ")
 
-print("Los primos entre esos dos valores son:")
-for n in range(min, max):
+try:
+    numero = abs(int(num))
+    if numero < min:
+        print("Numero demasiado pequeño, vuelve a intentarlo")
+except ValueError:
+    print("Error: Ingresa un valor numérico válido.")
+    
+max = numero
+
+print(f"Los primos entre {min} y {max} son:")
+for n in range(min, max+1):
     if filtro_primo(n):
         print(n)
