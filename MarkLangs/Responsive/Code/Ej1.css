@@ -66,31 +66,31 @@
         {
             background-color:red;
             color:red;
-            grid-area: "red";   
+            grid-area: red;   
         }
         .yellow
         {
             background-color:yellow;
             color: yellow;
-            grid-area: "yellow";
+            grid-area: yellow;
         }
         .blue
         {
             background-color:rgb(16, 34, 197);
             color: rgb(16, 34, 197);
-            grid-area: "blue";
+            grid-area: blue;
         }
         .orange
         {
             background-color: orange;
             color: orange;
-            grid-area: "orange";
+            grid-area: orange;
         }
         .green
         {
             background-color: green;
             color: green;
-            grid-area: "green";
+            grid-area: green;
         }
 }
 @media only screen and (min-width: 1000px) 
