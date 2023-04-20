@@ -46,7 +46,7 @@
 
 
 /* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
-@media only screen and (min-width: 768px) 
+@media only screen and (min-width: 576px) 
 {
     .container {
         display: grid;
@@ -94,7 +94,7 @@
             grid-area: "green";
         }
 }
-@media only screen and (min-width: 768px) 
+@media only screen and (min-width: 1000px) 
 {
     .container {
         display: grid;
