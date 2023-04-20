@@ -3,7 +3,7 @@
     grid-template-columns:repeat(1, 100%);
     grid-template-rows: 150px 150px 150px 20px 20px;
     margin: 15px auto;
-    width: 80%;
+    width: 100%;
     grid-template-areas: "red"
                          "green"
                          "yellow"
@@ -50,15 +50,14 @@
 {
     .container {
         display: grid;
-        grid-template-columns:repeat(1, 100%);
-        grid-template-rows: 150px 150px 150px 20px 20px;
+        grid-template-columns:repeat(2, 50%);
+        grid-template-rows: 100px 200px 200px 100px;
         margin: 15px auto;
-        width: 80%;
-        grid-template-areas: "red"
-                             "green"
-                             "yellow"
-                             "blue"
-                             "orange"; 
+        width: 100%;
+        grid-template-areas: "red red"
+                             "green yellow"
+                             "blue blue"
+                             "orange orange"; 
         }
         .container > div {
         border: 2px solid black;
