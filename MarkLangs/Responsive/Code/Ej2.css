@@ -1,0 +1,60 @@
+.container 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.header 
+{
+    border: 2px solid black;
+    color:white;
+    background-color: darkblue;
+    padding: 3%;
+}
+.texto > p
+{
+    letter-spacing: 0.1cm /* Para el lorem ipsum*/
+}
+
+.container2
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 150px 150px 75px;
+    margin: 15px auto;
+    width: 100%;
+    grid-template-areas: "sidebar sidebar"
+                         "wid1 wid2"
+                         "pie pie";
+}
+.sidebar
+{
+    background-color: orange;
+    padding: 3%;
+    grid-area: sidebar;
+    margin: 0.2cm;
+}
+.wid1
+{
+    background-color: #2bf;
+    color:white;
+    padding: 4%;
+    grid-area: wid1;
+    margin: 0.2cm;
+}
+.wid2
+{
+    background-color: #2bf;
+    color:white;
+    text-align: center;
+    padding: 4%;
+    grid-area: wid2;
+    margin: 0.2cm;
+}
+.pie
+{
+    background-color: darkblue;
+    color: white;
+    grid-area: pie;
+    margin: 0.2cm;
+}
