@@ -6,7 +6,7 @@ def lista_divisores(x):
         a = [a for a in range(2, x) if x%a==0]
     return a
 
-filtro_primo = lambda n: not bool(lista_divisores(n))
+filtro_primo = lambda n: not lista_divisores(n)
 
 num = input("Introduce un numero positivo: ")
 

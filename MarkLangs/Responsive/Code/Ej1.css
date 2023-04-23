@@ -1,94 +1,141 @@
 .container {
     display: grid;
-    grid-template-columns:repeat(5, 20%);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns:repeat(1, 100%);
+    grid-template-rows: 150px 150px 150px 20px 20px;
     margin: 15px auto;
-    width: 80%;
-    grid-template-areas: "cab  cab  cab  cab  cab"
-                         "side main main main sider"
-                         "side main main main sider"
-                         "feet feet feet feet feet"; 
+    width: 100%;
+    grid-template-areas: "red"
+                         "green"
+                         "yellow"
+                         "blue"
+                         "orange"; 
     }
     .container > div {
     border: 2px solid black;
     }
-    .feet
+    .red
     {
-        background-color:rgb(13, 204, 45);
-        color:rgb(13, 204, 45);
-        grid-area: feet;   
+        background-color:red;
+        color:red;
+        grid-area: red;   
     }
-    .main
+    .yellow
     {
         background-color:yellow;
         color: yellow;
-        grid-area: main;
+        grid-area: yellow;
     }
-    .cab
+    .blue
     {
         background-color:rgb(16, 34, 197);
         color: rgb(16, 34, 197);
-        grid-area: cab;
+        grid-area: blue;
     }
-    .side
+    .orange
     {
-        background-color: red;
-        color: red;
-        grid-area: side;
+        background-color: orange;
+        color: orange;
+        grid-area: orange;
     }
-    .sider
+    .green
     {
-        background-color: red;
-        color: red;
-        grid-area: sider;
+        background-color: green;
+        color: green;
+        grid-area: green;
     }
 
 
 /* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
-@media only screen and (min-width: 768px) 
+@media only screen and (min-width: 576px) 
 {
     .container {
         display: grid;
-        grid-template-columns:repeat(5, 20%);
-        grid-template-rows: repeat(4, 100px);
+        grid-template-columns:repeat(2, 50%);
+        grid-template-rows: 100px 200px 200px 100px;
         margin: 15px auto;
-        width: 80%;
-        grid-template-areas: "cab  cab  cab  cab  cab"
-                             "side main main main sider"
-                             "side main main main sider"
-                             "feet feet feet feet feet"; 
+        width: 100%;
+        grid-template-areas: "red red"
+                             "green yellow"
+                             "blue blue"
+                             "orange orange"; 
         }
         .container > div {
         border: 2px solid black;
         }
-        .feet
-        {
-            background-color:rgb(13, 204, 45);
-            color:rgb(13, 204, 45);
-            grid-area: feet;   
-        }
-        .main
+        .red
         {
             background-color:red;
-            color: red;
-            grid-area: main;
+            color:red;
+            grid-area: red;   
         }
-        .cab
+        .yellow
         {
-            background-color:rgb(1, 0, 7);
-            color: rgb(1, 0, 7);
-            grid-area: cab;
+            background-color:yellow;
+            color: yellow;
+            grid-area: yellow;
         }
-        .side
+        .blue
         {
-            background-color: rgb(21, 196, 36);
-            color: rgb(21, 196, 36);
-            grid-area: side;
+            background-color:rgb(16, 34, 197);
+            color: rgb(16, 34, 197);
+            grid-area: blue;
         }
-        .sider
+        .orange
         {
-            background-color:rgb(21, 196, 36);
-            color: rgb(21, 196, 36);
-            grid-area: sider;
+            background-color: orange;
+            color: orange;
+            grid-area: orange;
+        }
+        .green
+        {
+            background-color: green;
+            color: green;
+            grid-area: green;
+        }
+}
+@media only screen and (min-width: 1000px) 
+{
+    .container {
+        display: grid;
+        grid-template-columns:repeat(3, 33.3%);
+        grid-template-rows: 200px 200px 200px;
+        margin: 15px auto;
+        width: 100%;
+        grid-template-areas: "red red red"
+                             "green yellow blue"
+                             "orange orange orange"; 
+        }
+        .container > div {
+        border: 2px solid black;
+        }
+        .red
+        {
+            background-color:red;
+            color:red;
+            grid-area: red;   
+        }
+        .yellow
+        {
+            background-color:yellow;
+            color: yellow;
+            grid-area: yellow;
+        }
+        .blue
+        {
+            background-color:rgb(16, 34, 197);
+            color: rgb(16, 34, 197);
+            grid-area: blue;
+        }
+        .orange
+        {
+            background-color: orange;
+            color: orange;
+            grid-area: orange;
+        }
+        .green
+        {
+            background-color: green;
+            color: green;
+            grid-area: green;
         }
 }
