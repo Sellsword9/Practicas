@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class Bogosort {
     public static void main(String[] args) {
         final int PORDEFECTO = 500;
-        System.out.println("Imput for size (1-1000 recommended)");
-        System.out.println("Introduce el tamaño (1-1000 recomendado)");
+        System.out.println("Imput for size (1-20 recommended)");
+        System.out.println("Introduce el tamaño (1-20 recomendado)");
         Scanner sc = new Scanner(System.in);
         int Max = sc.nextInt();
         sc.close();
