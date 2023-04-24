@@ -27,5 +27,12 @@ Cargo.lock
 # System files
 *.DS_Store
 Thumbs.db
+<<<<<<< HEAD
+##Python
+**/__pycache__/
+#Go
+*.exe
+=======
 ##Marklangs
 *.rar
+>>>>>>> 6246e58357f11d84fc58b0a547d7f9ca0de7b820
