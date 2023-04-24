@@ -1,3 +1,2 @@
 *.sql linguist-language=SQL
 *.sql linguist-detectable=true
-*.tex linguist-language=LaTeX
