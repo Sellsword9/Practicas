@@ -1,6 +1,7 @@
 # pylint: disable=all
+# Se pregunta un numero y se dice si es primo o no
 """
-Comprueba si un numero dado es primo o no
+Encuentra todos los factores primos del numero introducido
 """
 def lista_divisores(x) -> list:
     """
@@ -20,9 +21,13 @@ try:
     if filtro_primo(numero):
         print("Tu numero es primo")
     else:
-        print("Tu numero no es primo")
-        print("Sus divisores no triviales son: ")
+        # Sacar todos los factores primos del numero
+        factores = []
         for a in lista_divisores(numero):
+            if filtro_primo(a):
+                factores.append(a)
+        print("Sus factores primos son: ")
+        for a in factores:
             print(a)
 except ValueError:
     print("Error: Ingresa un valor numérico válido.")
