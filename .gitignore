@@ -27,12 +27,24 @@ Cargo.lock
 # System files
 *.DS_Store
 Thumbs.db
-<<<<<<< HEAD
 ##Python
 **/__pycache__/
 #Go
 *.exe
-=======
 ##Marklangs
 *.rar
->>>>>>> 6246e58357f11d84fc58b0a547d7f9ca0de7b820
+##TeX
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.synctex.gz
+#Get out every pdf in the folder Pure Math
+**/Pure Math/**/*.pdf
