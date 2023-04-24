@@ -7,7 +7,7 @@ public class Instituto {
     private String nombre;
     private List<Alumno> alumnos;
     public Instituto(String nombre){
-        
+     nombre = this.nombre;   
     }
     public String getNombre(){
         throw new UnsupportedOperationException("Sin programar");
