@@ -1,5 +1,6 @@
+# pylint: disable=invalid-name
 """
-Bogosort is a very inefficient sorting algorithm. 
+This is a very inefficient sorting algorithm. 
 It works by generating random permutations of the list until it finds one that is sorted.
 This script is a simple implementation of the algorithm.
 Also it checks how much time do quicksort takes 
@@ -12,7 +13,7 @@ import sys
 
 def protector(iterations_now: int):
     """
-    Ends the program if the iterations exceed 100 millions
+    Ends the program if the iterations exceed one billion
     and prints iterations conditionally.
     """
     # checks if the iterations are a multiple of 5 by functional programming
@@ -28,7 +29,7 @@ def protector(iterations_now: int):
                     print("Iterations:", iterations_now, sep=" ")
 
 
-    if iterations_now > 100000000:
+    if iterations_now > 1_000_000_000:
         print("The algorithm took too long to sort the list.")
         print("Please try again with a smaller list.")
         sys.exit()
@@ -52,8 +53,6 @@ def quicksort(list_to_sort: list):
     if len(list_to_sort) <= 1:
         return list_to_sort, 0
     pivot = list_to_sort[random.randint(0, len(list_to_sort) - 1)]
-    # to make it fair, we will do the quicksort using a for statement
-    # instead of a list comprehension
     less = []
     equal = []
     greater = []
