@@ -43,9 +43,6 @@
         color: green;
         grid-area: green;
     }
-
-
-/* Estilos sólo para pantallas que tengan al menos 768px de anchura*/
 @media only screen and (min-width: 576px) 
 {
     .container {

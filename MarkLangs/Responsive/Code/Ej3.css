@@ -1,0 +1,187 @@
+.container 
+{
+    display: flex;
+    flex-direction: column;
+}
+.BigContainer{
+    display: none;
+}
+
+.header 
+{
+    border: 2px solid black;
+    color:white;
+    background-color: darkblue;
+    padding: 3%;
+}
+.texto > p
+{
+    letter-spacing: 0.1cm /* Para el lorem ipsum*/
+}
+
+.container2
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 150px 150px 75px;
+    margin: 15px auto;
+    width: 100%;
+    grid-template-areas: "sidebar sidebar"
+                         "wid1 wid2"
+                         "pie pie";
+}
+.sidebar
+{
+    background-color: orange;
+    padding: 3%;
+    grid-area: sidebar;
+    margin: 0.2cm;
+}
+.wid1
+{
+    background-color: #2bf;
+    color:white;
+    padding: 4%;
+    grid-area: wid1;
+    margin: 0.2cm;
+}
+.wid2
+{
+    background-color: #2bf;
+    color:white;
+    text-align: center;
+    padding: 4%;
+    grid-area: wid2;
+    margin: 0.2cm;
+}
+.pie
+{
+    background-color: darkblue;
+    color: white;
+    grid-area: pie;
+    margin: 0.2cm;
+}
+@media only screen and (min-width: 576px)
+{
+.container 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.BigContainer{
+    display: none;
+}
+.header 
+{
+    border: 2px solid black;
+    color:white;
+    background-color: darkblue;
+    padding: 3%;
+}
+.texto > p
+{
+    letter-spacing: 0.1cm /* Para el lorem ipsum*/
+}
+
+.container2
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 150px 150px 75px;
+    margin: 15px auto;
+    width: 100%;
+    grid-template-areas: "sidebar sidebar"
+                         "wid1 wid2"
+                         "pie pie";
+}
+.sidebar
+{
+    background-color: orange;
+    padding: 3%;
+    grid-area: sidebar;
+    margin: 0.2cm;
+}
+.wid1
+{
+    background-color: #2bf;
+    color:white;
+    padding: 4%;
+    grid-area: wid1;
+    margin: 0.2cm;
+}
+.wid2
+{
+    background-color: #2bf;
+    color:white;
+    text-align: center;
+    padding: 4%;
+    grid-area: wid2;
+    margin: 0.2cm;
+}
+.pie
+{
+    background-color: darkblue;
+    color: white;
+    grid-area: pie;
+    margin: 0.2cm;
+}
+}
+@media only screen and (min-width: 1000px)
+{
+.container 
+{
+    display: none;
+}
+.container2
+{
+    display: none;
+}
+.BigContainer
+{
+    display: grid;
+    grid-template-rows: 100px 500px 200px 80px;
+    grid-template-columns: 44% 44% 12%;
+    grid-template-areas: "header header header"
+                         "texto  texto  sidebar"
+                         "wid1   wid2   sidebar"
+                         "pie    pie    pie"
+}
+.header 
+{
+    border: 2px solid black;
+    color:white;
+    background-color: darkblue;
+    grid-area: header;
+}
+.texto > p
+{
+    letter-spacing: 0.1cm; /* Para el lorem ipsum*/
+    grid-area: texto;
+}
+.sidebar
+{
+    background-color: orange;
+}
+.wid1
+{
+    background-color: #2bf;
+    color:white;
+    padding: 4%;
+    margin: 0.2cm;
+}
+.wid2
+{
+    background-color: #2bf;
+    color:white;
+    text-align: center;
+    padding: 4%;
+    margin: 0.2cm;
+}
+.pie
+{
+    background-color: darkblue;
+    color: white;
+    margin: 0.2cm;
+}
+}
