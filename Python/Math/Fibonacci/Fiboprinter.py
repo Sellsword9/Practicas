@@ -1,9 +1,9 @@
-def fibo(num: int):
+def fibo(num_par: int):
     nums = []
-    if fibo < 2:
+    if num_par < 2:
         nums.append(2)
     else:
-        
+        print("something")
 try:
     num = input("Introduce cúantos numeros quieres, como un numero positivo(Min: 1): ")
     numero = abs(int(num))
