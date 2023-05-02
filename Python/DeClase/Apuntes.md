@@ -10,3 +10,6 @@ Hay diferencia entre metodo y funcion.
 Son los tipos de datos que se le asignan a las variables,
 en las funciones, los datos esperados.
 Por defecto, Python los ignora
+## Enumerate
+La funcion enumerate(list) devuelve una tupla con la posicion
+de cada elemento de la lista seguido de si mismo
