@@ -17,3 +17,11 @@ alumnos = [
     
     
 ]
+
+def add_alumno():
+    nom = input("Introduce el nombre")
+    edad_str = input("Introduce la edad")
+    edad = int(edad_str)
+    nota_str = input("Introduce la nota")
+    nota = int(nota_str)
+    alumnos.append({"nombre" : nom, "edad": edad, "nota": nota})
