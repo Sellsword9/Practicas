@@ -47,3 +47,4 @@ for n in range(min, max+1):
         primos.append(n)
     
 print(f"Su suma es: {sum(primos)}")
+input()

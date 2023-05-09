@@ -31,3 +31,4 @@ try:
             print(a)
 except ValueError:
     print("Error: Ingresa un valor numérico válido.")
+input()

@@ -43,3 +43,5 @@ print(f"Los primos entre {min} y {max} son:")
 for n in range(min, max+1):
     if filtro_primo(n):
         print(n)
+
+input()
