@@ -13,3 +13,20 @@ foreach ($vari in 1..99)
     $r = [math]::Sqrt($vari)
     Write-Host [$r]
 }
+Read-Host "Pulsa intro para continuar"
+#Otro foreach
+Clear-Host
+$ruta = "C:\Windows"
+#TODO
+#FIXME
+Write-Host "TODO"
+$pregunta = Read-Host "Introduce el fichero a buscar"
+
+
+foreach ($fich in Get-ChildItem $ruta)
+{
+    if ($fich.Name.IndexOf($pregunta) -ge 0)
+    {
+        Write-Host $fichero.Name
+    }
+}
