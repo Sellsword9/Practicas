@@ -36,5 +36,11 @@ translate= {
     '----.': '9',
     '-----': '0'
 }
+a = input("Input: ")
+c = ""
+for _ in range(1, 1000):
+    for word in a.split(" "):
+        c += translate[word]
 
+print(c)
 
