@@ -65,4 +65,4 @@ def measure_execution_time(algorithm, num_times: float, text: str) -> float:
     print(f"Translation is {translation} and it took {time_count} seconds to translate it {total_times} times. Avg: {time_count / total_times} seconds/iteration")
 
 
-measure_execution_time(iterate_translation, 1e6, ". . ...-- ....- .---- ----- ..... .")
+measure_execution_time(iterate_translation, 1e5, ". . ...-- ....- .---- ----- ..... .")
