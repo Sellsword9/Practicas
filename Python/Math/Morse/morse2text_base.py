@@ -42,21 +42,26 @@ translate= {
     '-----': '0'
 }
 
-def iterate_translation(text: str) -> float:
+def iterate_translation(text: str) -> str:
     c = ""
-    for word in text.split(" "):
+    for word in text.split():
         c += translate[word]
         c += " "
-    return c.strip
+    return c.strip()
 
-def measure_execution_time(algorithm: function, num_times: int, text: str) -> float:
-    time: float = 0
+def measure_execution_time(algorithm, num_times: float, text: str) -> float:
+    time_count: float = 0
     translation = "## Error: Translation was not accomplished ##"
-    for _ in range(num_times):
+    while (num_times > 0):
         start_time = time.time()  # Start the timer
         translation = algorithm(text)  # Execute the algorithm
         end_time = time.time()  # Stop the timer
         execution_time = end_time - start_time
-        time += execution_time
-    
-    print(f"Translation is {translation} and it took {time}")
+        time_count += execution_time
+        num_times = num_times - 1
+    try:
+        print(f"Translation is {translation} and it took {time_count} to translate it {num_times} times. Avg: {time_count / num_times}")
+    except:
+        print("float division by 0")
+
+measure_execution_time(iterate_translation, 10e4, ". . ...--")
