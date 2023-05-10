@@ -51,6 +51,7 @@ def iterate_translation(text: str) -> str:
 
 def measure_execution_time(algorithm, num_times: float, text: str) -> float:
     time_count: float = 0
+    total_times = num_times
     translation = "## Error: Translation was not accomplished ##"
     while (num_times > 0):
         start_time = time.time()  # Start the timer
@@ -59,9 +60,9 @@ def measure_execution_time(algorithm, num_times: float, text: str) -> float:
         execution_time = end_time - start_time
         time_count += execution_time
         num_times = num_times - 1
-    try:
-        print(f"Translation is {translation} and it took {time_count} to translate it {num_times} times. Avg: {time_count / num_times}")
-    except:
-        print("float division by 0")
+        print(f"Percent done yet: {100 - (num_times / total_times) * 100}%")
+    
+    print(f"Translation is {translation} and it took {time_count} seconds to translate it {total_times} times. Avg: {time_count / total_times} seconds/iteration")
 
-measure_execution_time(iterate_translation, 10e4, ". . ...--")
+
+measure_execution_time(iterate_translation, 1e6, ". . ...-- ....- .---- ----- ..... .")
