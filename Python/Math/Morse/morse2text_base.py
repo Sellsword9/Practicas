@@ -57,6 +57,6 @@ def measure_execution_time(algorithm: function, num_times: int, text: str) -> fl
         translation = algorithm(text)  # Execute the algorithm
         end_time = time.time()  # Stop the timer
         execution_time = end_time - start_time
-        total_time += execution_time
+        time += execution_time
     
     print(f"Translation is {translation} and it took {time}")
