@@ -49,6 +49,17 @@ def iterate_translation(text: str) -> str:
         c += " "
     return c.strip()
 
+def second_algorithm_remover(text: str, dic: dict) -> str:
+    updated_list = dic
+    for morse, translation in tuple(dic):
+        print(f"{morse} means: {translation}")
+    
+    return updated_list
+
+def second_algorithm(text: str):
+    second_algorithm_remover(text, translate)
+
+
 def measure_execution_time(algorithm, num_times: float, text: str) -> float:
     time_count: float = 0
     total_times = num_times
@@ -65,4 +76,5 @@ def measure_execution_time(algorithm, num_times: float, text: str) -> float:
     print(f"Translation is {translation} and it took {time_count} seconds to translate it {total_times} times. Avg: {time_count / total_times} seconds/iteration")
 
 
-measure_execution_time(iterate_translation, 1e5, ". . ...-- ....- .---- ----- ..... .")
+measure_execution_time(iterate_translation, 1e2, ". . ...-- ....- .---- ----- ..... .")
+measure_execution_time(second_algorithm, 1, ". . ...-- ....- .---- ----- ..... .")
