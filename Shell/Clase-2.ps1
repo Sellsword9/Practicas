@@ -1,18 +1,17 @@
 ﻿clear
 function copiar($path1, $path2)
 {
-    #Función que copia los ficheros de un diretorio a otro
+    #Función que copia los ficheros exe de un diretorio a otro
 
     if (Test-Path -Path $directorio)
         {
-            #TODO
+            Copy-Item -Path $path1\*.exe $path2
         }
 
 }
 function contar($path1)
 {
-    #Función que devuelve el numero de ficheros que hay en ese path
-    # TODO
+   (Get-ChildItem -Path $path1 -File).Length
 }
 
 $directorio = Read-Host "Introduzca directorio de destino"
