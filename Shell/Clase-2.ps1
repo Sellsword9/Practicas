@@ -1,21 +1,10 @@
 ﻿clear
-function copiar($path1, $path2)
+$usuario = Read-Host("Introduce el nombre de un usuario")
+if ((Get-LocalUser).name.contains($usuario)) {
+    Write-Host("Usuario ya existente")
+}else
 {
-    #Función que copia los ficheros exe de un diretorio a otro
-
-    if (Test-Path -Path $directorio)
-        {
-            Copy-Item -Path $path1\*.exe $path2
-        }
-
-}
-function contar($path1)
-{
-   (Get-ChildItem -Path $path1 -File).Length
-}
-
-$directorio = Read-Host "Introduzca directorio de destino"
-
-if (Test-Path -Path $directorio) {
-    New-Item -Path $directorio -ItemType Directory
+    $contra = Read-Host("Introduce la contraseña para el nuevo usuario")
+    $sec = ConvertTo-SecureString $contra -AsPlainText -Force
+    New-LocalUser -Password $sec -Name $usuario -Verbose
 }
