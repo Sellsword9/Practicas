@@ -15,3 +15,7 @@ function contar($path1)
 }
 
 $directorio = Read-Host "Introduzca directorio de destino"
+
+if (Test-Path -Path $directorio) {
+    New-Item -Path $directorio -ItemType Directory
+}
