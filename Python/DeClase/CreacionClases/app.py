@@ -16,5 +16,18 @@ print(cuenta)
 
 print(d)
 
+print("--------------  Parte de la persona nadadora  --------------")
+
 per = Persona("Paco", 12)
 per.nadar()
+
+print("--------------  Parte de la caja  --------------")
+
+caja = Caja()
+caja.abrir_caja()
+if (caja):
+    caja.cambiar_mensaje(input("Introduce tu mensaje: "))
+    if (caja.get_mensaje() == "falla"):
+        caja.abierto = False
+print("Tu mensaje ha sido: ", caja.get_mensaje())
+print("Prueba otra vez y introduce el mensaje 'falla' para que el programa cierre la caja y falle al intentar acceder")

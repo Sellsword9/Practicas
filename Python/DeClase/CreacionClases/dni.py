@@ -74,3 +74,22 @@ class Persona(Nadador):
     def comparar_personas(p1, p2):
         """Este método devuleve la persona con mayor edad"""
         return p1 if p1.edad > p2.edad else p2
+    
+class Caja:
+    def __init__(self):
+        self.mensaje = None
+        self.abierto = False
+    def abrir_caja(self):
+        self.abierto = True
+    def get_mensaje(self) -> str:
+        if self.abierto:
+            return self.mensaje
+        else:
+            raise KeyError("Error porque la caja está cerrada")
+    def cambiar_mensaje(self, mens: str):
+        if self.abierto:
+            self.mensaje
+        else:
+            raise IOError("Error porque no se puede cambiar el mensaje de una caja cerrada")
+    def __bool__(self):
+        return bool(self.abierto)
