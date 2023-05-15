@@ -50,4 +50,27 @@ def crearDni(s: str) -> dni:
     """
     return dni(int(s))
 
-        
+class Nadador:
+    """Una implementacion de la interfaz Nadador"""
+    
+    def nadar(self):
+        """Este método es el que hace nadar al nadador"""
+        pass
+    def __init__(self, nom: str):
+        self.nombre = nom
+
+class Persona(Nadador):
+    "Una persona, que puede nadar"
+    def __init__(self, nombre: str, edad: int):
+        self.nombre = nombre
+        self.edad = edad
+    def nadar(self):
+        print("------0^")
+        print("-----0--")
+        print("----0---")
+        print("---0----")
+        print("--0-----")
+    @staticmethod
+    def comparar_personas(p1, p2):
+        """Este método devuleve la persona con mayor edad"""
+        return p1 if p1.edad > p2.edad else p2

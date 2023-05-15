@@ -1,5 +1,4 @@
-from dni import dni
-from dni import crearDni
+from dni import *
 
 d = dni(123123123)
 
@@ -16,3 +15,6 @@ print(cuenta)
 
 
 print(d)
+
+per = Persona("Paco", 12)
+per.nadar()
