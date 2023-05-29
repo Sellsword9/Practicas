@@ -1,13 +1,13 @@
 ﻿# ----- Bucles
 # do while -- while -- do until -- for -- foreach 
-clear
+Clear-Host
 $n = 0
 while ($n -lt 10) {
     $n++
     Write-Host $n
 }
 Read-Host "Pulsa intro para continuar"
-clear
+Clear-Host
 foreach ($vari in 1..99)
 {
     $r = [math]::Sqrt($vari)
