@@ -1,6 +1,6 @@
 #!/bin/bash
-# Author: Yeray Romero
-# Date: 2023/06/05
+# @Author: Yeray Romero
+# @Date: 2023/06/05
 # Create a example menu
 fn_files(){
     # List all files in given directory
