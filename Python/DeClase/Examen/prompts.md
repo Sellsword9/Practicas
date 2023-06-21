@@ -1,4 +1,4 @@
-Ejercicio 1 [2 puntos]
+# Ejercicio 1 [2 puntos]
 Aquí tienes una tabla que muestra cuánto vale 1€ en varias monedas:
 Dólar 1.42
 Libra 0.87
@@ -21,7 +21,7 @@ cantidad de dinero correspondiente en la moneda. Si la moneda no está en
 la tabla lanzará un ValueError con el mensaje “La moneda (nombre de la
 moneda) no está admitida.
 • Usa type hints en las funciones creadas
- E jercicio 2 [2 puntos]
+# Ejercicio 2 [2 puntos]
 La siguiente gráfica recoge los ingresos y gastos de una empresa en un año:
 Haz un programa que cree dos listas para guardar los ingresos y los gastos de la
 empresa. A continuación, se mostrará en pantalla:
@@ -32,7 +32,7 @@ Puedes hacer el ejercicio como quieras, pero para obtener la máxima puntuación
 • Saca tuplas con los datos de las dos listas a la vez
 • Programa funciones que te permitan reutilizar código
 • Usa type hints en las funciones creadas
-Ejercicio 3 [1.5 puntos]
+# Ejercicio 3 [1.5 puntos]
 Haz un programa que pregunte por teclado al usuario un día, mes y año y, en caso
 de que se trate de una fecha correcta, el programa mostrará el nombre del día de la
 semana (en español) que corresponde a esa fecha. Deberás utilizar la clase date que se
@@ -54,7 +54,7 @@ de que la fecha sea incorrecta, se deberá lanzar un ValueError
 • Haz una función que reciba como parámetro un número entre 0 y 6 y nos
 devuelva, en español, el nombre del día de la semana que le corresponde
 • Usa type hints en las funciones creadas
-Ejercicio 4 (2 puntos)
+# Ejercicio 4 (2 puntos)
 Programa la siguiente clase: ( __ quiere decir dos guiones bajos. Los métodos que
 sale subrayado son “métodos estáticos”)
 Cuenta_Corriente
@@ -85,7 +85,9 @@ función:
 incluido)
 Para obtener la máxima puntuación:
 • Añade type hints a los métodos
- E jercicio 5 [0.5 puntos]
+
+
+# Ejercicio 5 [0.5 puntos]
 Programa la siguiente interfaz, y haz que la clase Cuenta_Corriente del ejercicio
 anterior la implemente.
 <<interface>>
@@ -94,7 +96,9 @@ Adinerado
 + retirar_dinero(cantidad)
 Para obtener la máxima puntuación:
 • Añade type hints a los métodos
-Ejercicio 6 [2 puntos]
+
+
+# Ejercicio 6 [2 puntos]
 Crea un diccionario que almacene esta información sobre los clientes de un banco
 (debes usar la clase del ejercicio 4):
 Nombre del cliente Cuentas corrientes de ese cliente
