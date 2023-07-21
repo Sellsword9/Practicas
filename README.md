@@ -1,9 +1,6 @@
 # Prácticas
 Microprogramas y prácticas en distintos lenguajes de programación.
 
-Un gran porcentaje de todo lo que codeo acaba aquí.
-
-
 
 Quizá puede ser util si no se conoce lo más básico de algún lenguaje,
 casi todo el código está comentado.
